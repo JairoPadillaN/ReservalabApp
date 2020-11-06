@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97ca5c31-12a4-4965-84c9-4863e907b4f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lib/pantallaPrincipal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pantallaPrincipal.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jeMxYDpVohdB7NAkc0RMlyiilx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97ca5c31-12a4-4965-84c9-4863e907b4f0" name="Default Changelist" comment="" />
+      <created>1604160350735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604160350735</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="289" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1604368019603">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="289" y="120" key="#com.intellij.ide.util.MemberChooser/0.40.1366.728@0.40.1366.728" timestamp="1604368019603" />
+    <state x="463" y="145" key="FileChooserDialogImpl" timestamp="1604358702551">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="463" y="145" key="FileChooserDialogImpl/0.40.1366.728@0.40.1366.728" timestamp="1604358702551" />
+    <state width="908" height="173" key="GridCell.Tab.0.bottom" timestamp="1604368933927">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state width="908" height="173" key="GridCell.Tab.0.bottom/0.40.1366.728@0.40.1366.728" timestamp="1604368933927" />
+    <state width="908" height="173" key="GridCell.Tab.0.center" timestamp="1604368933927">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state width="908" height="173" key="GridCell.Tab.0.center/0.40.1366.728@0.40.1366.728" timestamp="1604368933927" />
+    <state width="908" height="173" key="GridCell.Tab.0.left" timestamp="1604368933927">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state width="908" height="173" key="GridCell.Tab.0.left/0.40.1366.728@0.40.1366.728" timestamp="1604368933927" />
+    <state width="908" height="173" key="GridCell.Tab.0.right" timestamp="1604368933927">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state width="908" height="173" key="GridCell.Tab.0.right/0.40.1366.728@0.40.1366.728" timestamp="1604368933927" />
+    <state x="92" y="132" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1604364586568">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="92" y="132" width="1182" height="544" key="com.android.tools.idea.avdmanager.AvdListDialog/0.40.1366.728@0.40.1366.728" timestamp="1604364586568" />
+    <state x="180" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1604462920341">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="180" y="228" key="com.intellij.ide.util.TipDialog/0.40.1366.728@0.40.1366.728" timestamp="1604462920341" />
+    <state x="147" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604351161725">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="147" y="89" width="672" height="678" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1604351161725" />
+  </component>
+</project>

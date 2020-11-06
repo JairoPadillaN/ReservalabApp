@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pantalla_inicio_menu_lateral/inicioSesion.dart';
 import 'package:pantalla_inicio_menu_lateral/listaEstudios.dart';
@@ -19,8 +20,8 @@ class PantallaPrincipal extends StatelessWidget {
         drawer:MenuLateral(),
         body: Column(
           children: [
-            Image.network(
-              'https://elmedicointeractivo.com/wp-content/uploads/2020/03/laboratorio.png',
+            Image.asset(
+              'assets/img/laboratorio.png',
               width: 600,
             ),
             Text(
@@ -100,7 +101,8 @@ class MenuLateral extends StatelessWidget{
             accountName: Text("Reservalab"),
             accountEmail: Text("www.reservalab.com.mx"),
             decoration: BoxDecoration(
-              image: DecorationImage(image: NetworkImage("http://reservalab.com.mx/Imagenes/header.png"),
+              image: DecorationImage(
+                  image: NetworkImage ('http://reservalab.com.mx/Imagenes/header.png'),
                   fit: BoxFit.cover, alignment: Alignment.centerLeft),
             ),
           ),
@@ -136,9 +138,35 @@ class MenuLateral extends StatelessWidget{
             color: Colors.lightBlue,
             child:new ListTile(
               title: Text("Acerca de...", style: TextStyle(color: Colors.white),),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => acerca()
+                    )
+                );
+              },
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class acerca extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(title: new Text("Acerca de..."),),
+      body: Center(
+        child:
+        Text("Aplicación desarrolada para la materia Diseño de Apps impartido por la DRA Iyeliz Reyes de los Santos"
+            "Desarrollada por:"
+            "Guizar Peña Carlos Enrique"
+            "Padilla Nava Jairo"
+            "Palma Caballero Eber"),
       ),
     );
   }

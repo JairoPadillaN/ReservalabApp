@@ -1,0 +1,4 @@
+#Mon Nov 02 17:16:51 CST 2020
+base.0=C\:\\Users\\trans\\AndroidStudioProjects\\pantalla_inicio_menu_lateral\\build\\app\\intermediates\\transforms\\r8\\release\\0\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
