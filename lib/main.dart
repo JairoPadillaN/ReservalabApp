@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pantalla_inicio_menu_lateral/pantallaInicio.dart';
+import 'package:ReservalabApp/pantallaInicio.dart';
 
 void main() {
   runApp(MyApp());

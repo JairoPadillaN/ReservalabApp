@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pantalla_inicio_menu_lateral/inicioSesion.dart';
-import 'package:pantalla_inicio_menu_lateral/listaEstudios.dart';
+import 'package:ReservalabApp/inicioSesion.dart';
+
+import 'listaEstudios.dart';
 
 
 class PantallaPrincipal extends StatelessWidget {
@@ -114,7 +115,7 @@ class MenuLateral extends StatelessWidget{
                 Navigator.of(context).pop();
                 Navigator.of(context).push(
                 MaterialPageRoute(
-                    builder: (BuildContext context) => inicioSesion()
+                    builder: (BuildContext context) => InicioSesion()
                 )
                 );
               },

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pantalla_inicio_menu_lateral/pantallaPrincipal.dart';
+import 'package:ReservalabApp/pantallaPrincipal.dart';
 
 class PantallaInicio extends StatefulWidget {
 
