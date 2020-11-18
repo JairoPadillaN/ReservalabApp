@@ -1,6 +1,92 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+class inicioSesion extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(
+        title: new Text("Iniciar Sesión"),
+      ),
+      body: Column(
+        children: [
+          Image.asset(
+            'assets/img/laboratorio.png',
+            width: 600,
+          ),
+          FormularioInicioSesion(),
+        ],
+      ),
+    );
+  }
+}
+
+class FormularioInicioSesion extends StatefulWidget {
+  @override
+  Formulario createState() {
+    return Formulario();
+  }
+}
+
+class Formulario extends State<FormularioInicioSesion> {
+  final _formKey = GlobalKey<FormState>();
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('    Correo electronico', style: TextStyle(fontSize: 20)),
+          TextFormField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10))),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Ingresa tu correo electronico';
+              }
+            },
+          ),
+          Text(
+            '   Contraseña',
+            style: TextStyle(fontSize: 20),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10))),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Ingresa tu contraseña';
+              }
+            },
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: RaisedButton(
+                color: Colors.blueAccent,
+                onPressed: () {
+                  if (_formKey.currentState.validate()) {
+                    Scaffold.of(context)
+                        .showSnackBar(SnackBar(content: Text('Ingresando')));
+                  }
+                },
+                child: Text('Ingresar',
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Colors.white,
+                    )),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class InicioSesion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,7 +112,12 @@ class InicioSesion extends StatelessWidget {
       return Container(
           padding: const EdgeInsets.only(top: 32),
           child: RaisedButton(
-            child: Row(children: [Icon(FontAwesomeIcons.facebook),Text('          Inicia Sesion con Facebook'),],),
+            child: Row(
+              children: [
+                Icon(FontAwesomeIcons.facebook),
+                Text('          Inicia Sesion con Facebook'),
+              ],
+            ),
             onPressed: () {},
           ));
     }
@@ -66,8 +157,7 @@ class InicioSesion extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 16),
           children: [
             Image(
-              image: NetworkImage(
-                  'http://reservalab.com.mx/Imagenes/logo.png'),
+              image: NetworkImage('http://reservalab.com.mx/Imagenes/logo.png'),
               width: 250,
               fit: BoxFit.cover,
             ),
