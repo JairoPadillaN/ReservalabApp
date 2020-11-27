@@ -6,7 +6,23 @@ class inicioSesion extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(
-        title: new Text("Iniciar Sesión"),
+        title: Row(
+          children: [
+            Spacer(flex: 1),
+            //Boton de inicio de sesion
+            IconButton(
+              icon: Icon(
+                Icons.account_circle_outlined,
+                size: 30,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => inicioSesion()));
+              },
+            ),
+          ],
+        ),
       ),
       body: Column(
         children: [
