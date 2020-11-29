@@ -1,3 +1,4 @@
+import 'package:ReservalabApp/pantallaInicio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ReservalabApp/inicioSesion.dart';
@@ -12,6 +13,7 @@ class PantallaPrincipal extends StatelessWidget {
         appBar: AppBar(
           title: Row(
             children: [
+              Text('Reserbalab'),
               Spacer(flex: 1),
               //Boton de inicio de sesion
               IconButton(
@@ -29,33 +31,55 @@ class PantallaPrincipal extends StatelessWidget {
           ),
         ),
         drawer: MenuLateral(),
-        body: Column(
-          children: [
-            Image.asset(
-              'assets/img/laboratorio.png',
-              width: 600,
-            ),
-            Text(
-              '¿Quienes somos?',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
+        body: Padding(
+          padding: EdgeInsets.all(0),
+          child: ListView(
+            children: <Widget>[
+              Container(
+                alignment: Alignment.center,
+                child: Image.asset('assets/img/laboratorio.png', width: 600),
               ),
-            ),
-            Animacion(),
-            Text(
-              'Uso del cubrebocas',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text('Lavate las manos antes de colocartelo'),
-            Text('Revisa cual es el lado correcto'),
-            Text('Ajustalo a tu cara'),
-            Text('Su uso no debe durar más de un día'),
-            Text(''),
-            Text(
-              'Mas informacion acerca del Coronavirus',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ],
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  '¿Quienes somos?',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Animacion(),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'Uso del cubrebocas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                alignment: Alignment.center,
+                child: Text('''1. Lavate las manos antes de colocartelo
+2. Revisa cual es el lado correcto
+3. Ajustalo a tu cara
+4. Su uso no debe durar más de un día
+                '''),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                alignment: Alignment.center,
+                child: Text(
+                  'Mas informacion acerca del Coronavirus',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -115,6 +139,20 @@ class MenuLateral extends StatelessWidget {
                       'http://reservalab.com.mx/Imagenes/header.png'),
                   fit: BoxFit.cover,
                   alignment: Alignment.centerLeft),
+            ),
+          ),
+          Ink(
+            color: Colors.lightBlue,
+            child: new ListTile(
+              title: Text(
+                "Inicio",
+                style: TextStyle(color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => PantallaPrincipal()));
+              },
             ),
           ),
           Ink(

@@ -1,39 +1,111 @@
+import 'package:ReservalabApp/listaEstudios.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ReservalabApp/pantallaPrincipal.dart';
 
 class inicioSesion extends StatelessWidget {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            Spacer(flex: 1),
-            //Boton de inicio de sesion
-            IconButton(
-              icon: Icon(
-                Icons.account_circle_outlined,
-                size: 30,
+        appBar: AppBar(
+          title: Row(
+            children: [
+              Text('Inicio de sesion'),
+              Spacer(flex: 1),
+              //Boton de inicio de sesion
+              IconButton(
+                icon: Icon(
+                  Icons.account_circle_outlined,
+                  size: 30,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => inicioSesion()));
+                },
               ),
-              onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => inicioSesion()));
-              },
-            ),
-          ],
-        ),
-      ),
-      body: Column(
-        children: [
-          Image.asset(
-            'assets/img/laboratorio.png',
-            width: 600,
+            ],
           ),
-          FormularioInicioSesion(),
-        ],
-      ),
-    );
+        ),
+        drawer: MenuLateral(),
+        body: Padding(
+            padding: EdgeInsets.all(0),
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.center,
+                  child: Image.network(
+                      "https://emc.mty.itesm.mx/wp-content/uploads/2016/01/laboratorio-clinico-emc-ocd-diplomado.jpg"),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                  child: TextField(
+                    controller: nameController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Usuario',
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                  child: TextField(
+                    obscureText: true,
+                    controller: passwordController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Contraseña',
+                    ),
+                  ),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => listaEstudios()));
+                  },
+                  textColor: Colors.blueAccent,
+                  child: Text('Olvide mi contraseña'),
+                ),
+                Container(
+                    height: 50,
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.blueAccent,
+                      child: Text('Ingresar'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => listaEstudios()));
+                      },
+                    )),
+                Container(
+                    child: Row(
+                  children: <Widget>[
+                    Text('¿Eres nuevo?'),
+                    FlatButton(
+                      textColor: Colors.blue,
+                      child: Text(
+                        'Registrate',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => listaEstudios()));
+                      },
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ))
+              ],
+            )));
   }
 }
 
