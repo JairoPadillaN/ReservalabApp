@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:ReservalabApp/inicioSesion.dart';
-import 'listaEstudios.dart';
 
 class listaEstudios extends StatelessWidget {
   @override
@@ -39,8 +37,46 @@ class listaEstudios extends StatelessWidget {
           ],
         ),
       ),
+      //Ejemplo de la lista de estudios
       body: Center(
-        child: Text("Aqui iran todos los estudios que ofreceremos"),
+        child: ListView(
+          children: [
+            Image.network(
+                "https://emc.mty.itesm.mx/wp-content/uploads/2016/01/laboratorio-clinico-emc-ocd-diplomado.jpg"),
+            Padding(
+              padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+              child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.blueAccent),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.add_circle_outline, size: 20),
+                        Text('Nombre del estudio'),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text('      Precio', textAlign: TextAlign.left),
+                        Spacer(flex: 1),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text('Agendar',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blueAccent,
+                              )),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
